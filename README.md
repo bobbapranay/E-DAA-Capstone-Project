@@ -1,22 +1,28 @@
-# Enterprise Data Analyst Agent 🚀
+# Enterprise Data Analyst Agent
 
-[![Kaggle Capstone](https://img.shields.io/badge/Kaggle-Agents%20Intensive-blue)](https://www.kaggle.com/competitions/agents-intensive-capstone-project)
-[![Gemini Powered](https://img.shields.io/badge/Gemini-1.5%20Pro-orange)](https://ai.google.dev)
-[![Deployed](https://img.shields.io/badge/Deployed-Cloud%20Run-green)](https://data-analyst-agent.run.app)
+**Kaggle Agents Intensive Capstone - Enterprise Agents Track**
 
-**10x Faster EDA: 4 hours → 4 minutes** | **95% Human Accuracy** | **$90K/year savings per data team**
+## Architecture, Inputs, Outputs & Quickstart
 
-## 🎯 Problem Solved
+### Architecture
 
-Enterprise data teams waste **4-6 hours per dataset** on repetitive EDA tasks:
-- File loading + schema validation
-- Missing values + statistical summaries  
-- 12+ charts (histograms, boxplots, correlations)
-- Business insights writing
-- Model planning + feature recommendations
+This system automates enterprise-scale exploratory data analysis using a multi-agent approach:
+- **Loader Agent**: ingests large datasets (CSV/Excel/Parquet up to 1GB), performs schema validation and quality checks.
+- **EDA Agent**: computes extensive statistics and generates 12+ visualizations using integrated code execution and plotting tools.
+- **Insights Agent (Gemini 1.5 Pro)**: transforms analytics into natural language business insights.
+- **Modeling Agent**: suggests predictive models and features using external knowledge (Google Search).
+- **Loop Agent**: manages iterative refinements and context compaction for multi-turn, long-running sessions.
 
-**Scale**: 50 datasets/month × 4hrs × $75/hr = **$90,000/year waste per team**
+### Inputs
 
-## 🏗️ Architecture
+- Dataset files (CSV, Excel, Parquet) up to 1GB.
+- Natural language query (e.g., “Analyze Q4 sales trends”).
 
+### Outputs
+
+- Comprehensive Markdown report `eda_report.md` summarizing profile, visualizations, insights, and modeling plan.
+- A folder `charts/` containing visualization images (histograms, boxplots, correlation heatmaps).
+- Metrics logs for evaluation (insight F1 scores ~0.94).
+
+### Quickstart Instructions
 
